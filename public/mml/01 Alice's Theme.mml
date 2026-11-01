@@ -1,0 +1,68 @@
+; VGM Analyzer MML for OPNAvoid (PMD-style dialect)
+; Source: 01 Alice's Theme.vgz
+; YM2608 FM/SSG/ADPCM/rhythm. Minimum 1/16; manual BPM=92, not detected.
+; Quantized base FNUM pitch and observed FM patches; modulation and live register changes are not reproduced.
+; Unknown/out-of-range pitches become rests. KEY OFF does not include audible release.
+; MIDI 60 = o4 c; &=tie; default full gate. SSG v is the peak volume; software envelopes are not reproduced.
+; Timer B T162: approximately 92.199 BPM (hardware timer rounding).
+; OPNAvoid compatibility does not imply compatibility with every PMD compiler.
+; VGM loop is not expanded.
+; WARNING (1): Unconverted YM2608 register port=0 reg=0x22
+; WARNING (1): Unconverted YM2608 register port=1 reg=0xba
+; WARNING (1): Unconverted YM2608 register port=1 reg=0xbb
+; WARNING (1): Unconverted YM2608 register port=1 reg=0xbc
+; WARNING (1): Invalid KEY channel omitted
+; Observed patch @1
+@2 = { 2, 7, 25, 7, 0, 3, 1, 31, 1, 2, 5, 0, 19, 9, 0, 2, 3, 24, 1, 10, 5, 0, 25, 7, 0, 3, 1, 42, 1, 2, 4, 0, 13, 4, 0, 7, 0, 27, 1, 2, 5, 0 }
+; Observed patch @2
+@1 = { 4, 7, 31, 0, 8, 0, 4, 34, 3, 1, 1, 0, 25, 7, 7, 7, 3, 27, 2, 1, 5, 0, 31, 0, 8, 0, 4, 32, 3, 3, 6, 0, 25, 7, 6, 7, 3, 27, 2, 1, 2, 0 }
+; Observed patch @3
+@0 = { 0, 4, 31, 7, 7, 9, 2, 28, 3, 6, 7, 0, 31, 6, 6, 9, 1, 58, 3, 5, 7, 0, 31, 9, 6, 9, 1, 22, 2, 0, 7, 0, 31, 6, 8, 9, 15, 9, 2, 1, 7, 0 }
+
+; CH1
+A T162 V108 p3 @0 o2 g4 o3 d8 o2 g8. b16 o3 c16 g16 f4 o2 a8 o3 f8 e8 d8 o2 g8. b16 o3
+A c16 d16 g4 d8 f8 c8 a8 o2 f8. a16 o3 c16 f16 o2 g4 o3 d8 o2 g8. b16 o3 c16 g16 f4 o2 a8
+A o3 f8 e8 d8 o2 g8. b16 o3 c16 d16 g4 d8 f8 c8 a8 o2 f8. a16 o3 c16 f16 o2 b4 o3 c8 d8
+A g8 b8 o2 f8. g16 a16 o3 c16 f8 c8 a8 g16 d16 o2 b16 g8. b8. o3 c16 d16 g16 o2 f8 a16 o3
+A c16 f16 a16 c8 o2 b16 a16 f8 g8 b8 o3 d8 g8. g16 a16 b16 c16 o2 b16 o3 c16 d16 e16 c16
+A o2 a8 o3 a8 o4 c8 o2 g2. g16
+
+; CH2
+B T162 V108 p3 @1 o4 d8 g8 b8 o5 d8 c8 o4 b8 a8 c8 f8 a8 o5 c8 o4 b8 g8 d8 o3 g8 b8 o4 d8
+B g8 a8 f8 o5 c8 d8 c8 o4 b8 d8 g8 b8 o5 d8 c8 o4 b8 a8 c8 f8 a8 o5 c8 o4 b8 g8 d8 o3 g8
+B b8 o4 d8 g8 a8 f8 o5 c8 d8 c8 o4 b8 o5 g8 d8 o4 b8 o5 g8 d8 o4 b8 o5 f8 c8 o4 a8 o5 a8
+B f8 c8 g8 d8 o4 b8 o5 b8 g8 d8 f8 c8 o4 a8 o5 a8 f8 c8 g8 d8 o4 b8 o5 g8 d8 o4 b8 o5 f8
+B c8 o4 a8 o5 e8 c8 o4 a8 g8 b8 o5 d8 g4. o4 d16
+
+; CH3
+C T162 V108 p3 @2 o5 b16 r16 d16 r16 g16 r4. r16 o6 c16 r16 o5 a16 r16 f16 r4. r16 o4 b16
+C r16 g16 r16 o5 d16 r4. r16 f16 r16 o4 a16 r16 o5 c16 r4. r16 b16 r16 d16 r16 g16 r4.
+C r16 o6 c16 r16 o5 a16 r16 f16 r4. r16 o4 b16 r16 g16 r16 o5 d16 r4. r16 f16 r16 o4 a16
+C r16 o5 c16 r4. r16 d4 o4 b8 o5 g4. f4. o4 a16 r16 f16 r16 o5 d16 r16 o4 g8 r16 d16 o3
+C b16 o4 d16 g8 r8 b16 r16 o5 c16 r16 o4 a16 r16 f16 r16 o5 c16 r16 e16 r16 d16 r16 o4
+C g16 d16 g16 b16 o5 d16 g16 b8. r8. f4. e4. d2. b16
+
+; SSG1
+G T162 P1 v13 o4 d8 c8 o3 b8 g8. d16 g16 b16 o4 c4 o3 a16 o4 c16 e4 f8 d4 o3 b16 g16 d8.
+G g16 b16 o4 d16 o3 f4. o4 e16 f16 e16 d16 c16 d16 o3 b4 b16 o4 c16 d8 g4 f16 e16 d16 c16
+G o3 b16 a16 f8 a8 d8 g4. o2 b8. b16 o3 d16 g16 f8 d8 e8 d8 c8 d8 g4 d8 b4. o4 c4. e8 o3
+G a8 o4 f8 o3 b8. g16 d16 g16 b4 o4 d8 a8 f8 c8 o3 a8 o4 c8 o3 b8 d16 o2 b16 o3 d16 g16
+G b16 o4 d16 g8. d16 o3 b16 o4 d16 c16 o3 b16 a16 g16 a16 b16 e16 d16 c16 o2 b16 o3 c16
+G d16 o2 b16 o3 c16 o2 b16 o3 c16 o2 b16 o3 c16 o2 b4. o4 d16
+
+; SSG2
+H T162 r16 P1 v12 o4 d8 c8 o3 b8 g8. d16 g16 b16 o4 c4 o3 a16 o4 c16 e4 f8 d4 o3 b16 g16
+H d8. g16 b16 o4 d16 o3 f4. o4 e16 f16 e16 d16 c16 d16 o3 b4 b16 o4 c16 d8 g4 f16 e16 d16
+H c16 o3 b16 a16 f8 a8 d8 g4. o2 b8. b16 o3 d16 g16 f8 d8 e8 d8 c8 d8 g4 d8 b4. o4 c4. e8
+H o3 a8 o4 f8 o3 b8. g16 d16 g16 b4 o4 d8 a8 f8 c8 o3 a8 o4 c8 o3 b8 d16 o2 b16 o3 d16
+H g16 b16 o4 d16 g8. d16 o3 b16 o4 d16 c16 o3 b16 a16 g16 a16 b16 e16 d16 c16 o2 b16 o3
+H c16 d16 o2 b16 o3 c16 o2 b16 o3 c16 o2 b16 o3 c16 o2 b4 r8
+
+; SSG3
+I T162 P1 v12 o4 d8 g8 b8 o5 d8 c8 o4 b8 a8 c8 f8 a8 o5 c8 o4 b8 g8 d8 o3 g8 b8 o4 d8 g8
+I a8 f8 o5 c8 d8 c8 o4 b16 r16 d8 g8 b8 o5 d8 c8 o4 b8 a8 c8 f8 a8 o5 c8 o4 b8 g8 d8 o3
+I g8 b8 o4 d8 g8 a8 f8 o5 c8 d8 c8 o4 b16 r16 o5 g8 d8 o4 b8 o5 g8 d8 o4 b8 o5 f8 c8 o4
+I a8 o5 a8 f8 r16 c16 r16 g16 r16 d16 r16 o4 b16 r16 o5 b16 r16 g16 r16 d16 r16 f16 r16
+I c16 r16 o4 a16 r16 o5 a16 r16 f16 r16 c16 r16 g16 r16 d16 r16 o4 b16 r16 o5 g16 r16 d16
+I r16 o4 b16 r16 o5 f16 r16 c16 r16 o4 a16 r16 o5 e16 r16 c16 r16 o4 a16 r16 g16 r16 b16
+I r16 o5 d16 r16 g8. r8.
