@@ -1,0 +1,88 @@
+{
+ "format": "kizuato-re-patch/1",
+ "game": "GakuenKING",
+ "lang": "en",
+ "version": "2026.11.01",
+ "created": "2026-11-01T16:00:34.834Z",
+ "title": "Gakuen KING -Hidehiko Gakkou wo Tsukuru- — English translation",
+ "requires": "your own copy of Gakuen KING (AliceSoft 1996, PC-98 CD version), installed on a PC-98 hard-disk image (.hdi) with the ALI_GAKU folder",
+ "credits": [
+  "Gakuen KING EN",
+  "Original game © 1996 AliceSoft.",
+  "Made with Kizuato Studio"
+ ],
+ "files": [
+  {
+   "path": "ALI_GAKU/ALI_GAKU/ADISK.DAT",
+   "patch": "ALI_GAKU_ADISK.DAT.bps",
+   "source": {
+    "size": 1377280,
+    "crc32": "aca19010"
+   },
+   "target": {
+    "size": 1800448,
+    "crc32": "caf4f977"
+   }
+  },
+  {
+   "path": "ALI_GAKU/ALI_GAKU/GAKUEN.COM",
+   "patch": "ALI_GAKU_GAKUEN.COM.bps",
+   "source": {
+    "size": 28762,
+    "crc32": "68053eb9"
+   },
+   "target": {
+    "size": 29262,
+    "crc32": "a7d8d77e"
+   }
+  },
+  {
+   "path": "ALI_GAKU/ALI_GAKU/ACG.DAT",
+   "patch": "ALI_GAKU_ACG.DAT.bps",
+   "source": {
+    "size": 1694208,
+    "crc32": "dba04f48"
+   },
+   "target": {
+    "size": 1584384,
+    "crc32": "f9c0258f"
+   }
+  },
+  {
+   "path": "ALI_GAKU/ALI_GAKU/BCG.DAT",
+   "patch": "ALI_GAKU_BCG.DAT.bps",
+   "source": {
+    "size": 1702144,
+    "crc32": "54d11a78"
+   },
+   "target": {
+    "size": 1704448,
+    "crc32": "df357db1"
+   }
+  },
+  {
+   "path": "ALI_GAKU/ALI_GAKU/CCG.DAT",
+   "patch": "ALI_GAKU_CCG.DAT.bps",
+   "source": {
+    "size": 1971456,
+    "crc32": "b96e89e2"
+   },
+   "target": {
+    "size": 1969152,
+    "crc32": "4140b347"
+   }
+  },
+  {
+   "path": "ALI_GAKU/ALI_GAKU/ECG.DAT",
+   "patch": "ALI_GAKU_ECG.DAT.bps",
+   "source": {
+    "size": 1937920,
+    "crc32": "b561484a"
+   },
+   "target": {
+    "size": 1494272,
+    "crc32": "3b81ba1f"
+   }
+  }
+ ]
+}
